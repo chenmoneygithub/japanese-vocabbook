@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Basic Web Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Japanese</th>
+      <th>English</th>
+    </tr>
+    {%for (japanese, english) in vocabs%}
+    <tr>
+      <th>{{japanese}}</th>
+      <th>{{english}}</th>
+    </tr>
+    {%endfor%}
+  </table>
+
+  <form method="post" action="/">
+    <input type="submit" value="VALUE1" name="action1" />
+  </form>
+
+</body>
+
+</html>
